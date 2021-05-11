@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	file, err := Unzip("zip.zip", "codes")
+	file, err := unzipfiles.Unzip("zip.zip", "codes")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -18,7 +18,7 @@ func main() {
 	files := []string{"code"}
 	output := "file1.zip"
 
-	if err := ZipFile(output, files); err != nil {
+	if err := zipfiles.ZipFile(output, files); err != nil {
 		panic(err)
 	}
 	fmt.Println("Zipped File: ", output)
